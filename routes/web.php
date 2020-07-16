@@ -1,5 +1,5 @@
 <?php
-
+/*
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/',"StudentController@index");
+Route::get('/edit/{id}',"StudentController@edit");
+Route::get('/show/{id}',"StudentController@show");
+Route::get('/create',"StudentController@create");
+Route::post('/store',"StudentController@store");
+Route::post('/update/{id}',"StudentController@update");
